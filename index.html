@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Satou Works Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div id="preloader">
+  <div class="loader-content">
+    
+    <div class="radial-progress-container">
+      <div class="loader-image-box">
+        <img src="images/Logo.png" alt="Satou Works Logo">
+      </div>
+      
+      <svg class="progress-ring" width="280" height="280" viewBox="0 0 280 280">
+        <circle class="progress-ring__track" cx="140" cy="140" r="100"/>
+        <circle class="progress-ring__bar" cx="140" cy="140" r="100" 
+                stroke-dasharray="628" stroke-dashoffset="628" />
+      </svg>
+    </div>
+    
+    <div class="text-container">
+      <h1 class="loader-title">SATOU WORKS</h1>
+      <div class="loading-text">Loading...</div>
+    </div>
+
+  </div>
+</div>
+
+<header>
+  <div class="logo"><a href="#home" style="color:var(--text); text-decoration:none;">Satou Works</a></div>
+  <nav>
+    <a href="#home">首頁</a>
+    <a href="#about">關於我</a>
+    <div class="dropdown">
+      <a href="#works" class="dropbtn">作品集 <i class="fa-solid fa-caret-down"></i></a>
+      <div class="dropdown-content">
+        <a href="#pv-works">PV 作品</a>
+        <a href="#anim-works">動畫作品</a>
+        <a href="#gif-works">動圖作品</a>
+        <a href="#edit-works">剪輯作品</a>
+      </div>
+    </div>
+    <a href="#contact">社群平台</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="images/ALL_2.mp4" type="video/mp4">
+  </video>
+  <div class="noise-overlay"></div>
+  <div class="dark-overlay"></div>
+  <div class="hero-content">
+    <h1>Satou Works</h1>
+    <p>PV / MV / 動畫 / 剪輯創作者</p>
+    <div class="quick-links">
+      <a href="#about" class="btn">關於我</a>
+      <a href="#works" class="btn">作品集</a>
+      <a href="#contact" class="btn">社群平台</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-box">
+    <h2>關於我</h2>
+    <div class="about-grid">
+      <div class="about-left">
+        <div class="about-avatar">
+          <img src="images/satou 1.PNG" alt="Satou 砂糖" />
+        </div>
+      </div>
+      <div class="about-right">
+        <h3 class="about-name">陳敬文（Satou）</h3>
+        <p class="lead">現年20歲 一位自學成材的動態設計師<br>擅長 AE、PR、Blender、PS、Mine-imator</p>
+        <div class="skills-icons">
+          <img src="images/Adobe_After_Effects_CC_icon.svg.png" class="After_Effects-icon" alt="AE">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" class="Adobe_Premiere_Pro-icon" alt="PR">
+          <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme/icons/blender.svg" class="blender-icon" alt="Blender">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="Adobe_Photoshop_CC-icon" alt="PS">
+          <img src="images/Mine-imator_icon.png" class="Mine-imator-icon" alt="Mi">
+        </div>
+        <p class="email-contact">✉️ Email：<a href="mailto:satouuworks@gmail.com">satouuworks@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="works" class="works-section">
+  <h2>作品集</h2>
+  <div class="works-grid-container">
+    
+    <div class="work-category-block" id="pv-works">
+      <h3>After Effects 作品</h3>
+      <div class="carousel-container">
+        <button class="scroll-btn left-btn" onclick="scrollCarousel('pv-track', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carousel-track" id="pv-track">
+          <div class="work-card"><div class="card-top-title">2023年3月4號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=1sPmbXUGUBA" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/1sPmbXUGUBA/maxresdefault.jpg" alt="深海少女"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">深海少女</div></div>
+          <div class="work-card"><div class="card-top-title">2024年6月4號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=E5ZXb3uVUOc" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/E5ZXb3uVUOc/maxresdefault.jpg" alt="早安大少爺"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">早安大少爺</div></div>
+          <div class="work-card"><div class="card-top-title">2025年10月4號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=GeRZaHaMoGE" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/GeRZaHaMoGE/maxresdefault.jpg" alt="ビビデバ"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">ビビデバ - 星街すいせい MV</div></div>
+          <div class="work-card"><div class="card-top-title">2025年10月24號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=whNJV_nMubM" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/whNJV_nMubM/hqdefault.jpg" alt="初配信預告PV"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">【#初配信預告PV】Moiralise -ミミ</div></div>
+          <div class="work-card"><div class="card-top-title">2025年9月12號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=-kmjqS_0in4" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/-kmjqS_0in4/hqdefault.jpg" alt="轉場練習"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">轉場練習</div></div>
+          <div class="work-card"><div class="card-top-title">2024年2月23號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=NU7ZJwWJlK0" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/NU7ZJwWJlK0/hqdefault.jpg" alt="文字PV練習"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">文字PV練習 - ハルノ寂寞</div></div>
+          <div class="work-card"><div class="card-top-title">2025年3月25號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=vEXfYv9n-nY" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/vEXfYv9n-nY/hqdefault.jpg" alt="AE MG小練習"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">AE MG小練習 - 環繞練習</div></div>
+          <div class="work-card"><div class="card-top-title">2024年2月9號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=MUpvjh8CQlA" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/MUpvjh8CQlA/hqdefault.jpg" alt="花の塔"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">自主PV練習 - 花の塔</div></div>
+          <div class="work-card"><div class="card-top-title">2024年2月9號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=ZDmuu2bLtnw" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/ZDmuu2bLtnw/hqdefault.jpg" alt="失敗作少女"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">自主PV練習 - 失敗作少女</div></div>
+          <div class="work-card"><div class="card-top-title">2023年4月8號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=KbjbEv9VsVw" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/KbjbEv9VsVw/hqdefault.jpg" alt="文字閃爍練習"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">文字閃爍練習</div></div>
+          <div class="work-card"><div class="card-top-title">202X年X月X號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=OrxbdVSvF0Q" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/OrxbdVSvF0Q/hqdefault.jpg" alt="神っぽいな"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">神っぽいな</div></div>
+          <div class="work-card"><div class="card-top-title">202X年X月X號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=iQwjNiB8_0Q" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/iQwjNiB8_0Q/hqdefault.jpg" alt="chinozo 'シェーマ'"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">chinozo 'シェーマ'</div></div>
+          <div class="work-card"><div class="card-top-title">2024年10月16號</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=o10Pk_ijqK8" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/o10Pk_ijqK8/hqdefault.jpg" alt="魚／怕胖團"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">魚／怕胖團｜cover by 月夏天橙</div></div>
+        </div>
+        <button class="scroll-btn right-btn" onclick="scrollCarousel('pv-track', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div class="work-category-block" id="anim-works">
+      <h3>動畫作品</h3>
+      <div class="carousel-container">
+        <button class="scroll-btn left-btn" onclick="scrollCarousel('anim-track', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carousel-track" id="anim-track">
+           <div class="work-card"><div class="card-top-title">2022年12月15日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=5q64pz0cbdU" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/5q64pz0cbdU/hqdefault.jpg" alt="作品 01"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[專題動畫] 追憶Memories [Minecraft Animation] 310數位動畫班 銅獎🥉</div></div>
+           <div class="work-card"><div class="card-top-title">2025年3月1日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=mTunScT47eY" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/mTunScT47eY/hqdefault.jpg" alt="作品 02"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[INTRO] Satou [Mine-imator+AE] (Minecraft Animation)</div></div>
+           <div class="work-card"><div class="card-top-title">2023年11月5日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=7zlJm7SrEXQ" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/7zlJm7SrEXQ/hqdefault.jpg" alt="作品 03"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[INTRO] SATOU [Mine-imator+AE] (Minecraft Animation)</div></div>
+           <div class="work-card"><div class="card-top-title">2022年9月18日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=6hbZwsCJFOk" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/6hbZwsCJFOk/hqdefault.jpg" alt="作品 04"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[INTRO] weeeweee [Mine-imator+AE] (Minecraft Animation)</div></div>
+           <div class="work-card"><div class="card-top-title">2022年2月9日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=ep3lRhfEalI" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/ep3lRhfEalI/hqdefault.jpg" alt="作品 05"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[$] INTRO - SnowBear [Mine-imator+AE] (Minecraft Animation)</div></div>
+           <div class="work-card"><div class="card-top-title">2021年11月14日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=7l7N-ND-v7I" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/7l7N-ND-v7I/hqdefault.jpg" alt="作品 06"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[$] INTRO - Blackmagic [Mine-imator+AE] (Minecraft Animation)</div></div>
+           <div class="work-card"><div class="card-top-title">2021年9月25日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=ciSh-G59rAs" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/ciSh-G59rAs/hqdefault.jpg" alt="作品 07"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[$] OUTRO - VOLCANO [Mine-imator+AE] (Minecraft Animation)</div></div>
+           <div class="work-card"><div class="card-top-title">2021年6月8日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=vhSZlBfHog0" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/vhSZlBfHog0/hqdefault.jpg" alt="作品 08"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[$] INTRO - Nov [Mine-imator+AE] (Minecraft Animation)</div></div>
+           <div class="work-card"><div class="card-top-title">2022年1月16日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=tFRqsiyUzRk" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/tFRqsiyUzRk/hqdefault.jpg" alt="作品 09"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[$] INTRO - Inukai_ [Mine-imator+AE] (Minecraft Animation)</div></div>
+           <div class="work-card"><div class="card-top-title">2023年3月27日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=LKLqUm03idQ" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/LKLqUm03idQ/hqdefault.jpg" alt="作品 10"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[INTRO] Kinny v2 [Mine-imator+AE] (Minecraft Animation)</div></div>
+           <div class="work-card"><div class="card-top-title">2024年1月28日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=Zmnj7veDQNw" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/Zmnj7veDQNw/hqdefault.jpg" alt="作品 11"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[OUTRO] NOV [Mine-imator+AE] (Minecraft Animation)</div></div>
+           <div class="work-card"><div class="card-top-title">2020年11月15日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=xCdgY6NMlAc" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/xCdgY6NMlAc/hqdefault.jpg" alt="作品 12"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[INTRO] LONELY [Mine-imator+AE] insp.zepeda[FX]</div></div>
+           <div class="work-card"><div class="card-top-title">2021年1月3日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=MuJNCrhKlOo" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/MuJNCrhKlOo/hqdefault.jpg" alt="作品 13"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[INTRO] Ly [Mine-imator+AE] Remake.MMATR</div></div>
+           <div class="work-card"><div class="card-top-title">2021年1月30日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=famH7Ag3eIk" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/famH7Ag3eIk/hqdefault.jpg" alt="作品 14"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[INTRO] Fish Cat [Mine-imator+AE] ft.xLittlecatTw Flat Flame</div></div>
+           <div class="work-card"><div class="card-top-title">2021年3月14日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=1osJ6_cqkag" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/1osJ6_cqkag/hqdefault.jpg" alt="作品 15"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[INTRO] Kinny [Mine-imator+AE]</div></div>
+           <div class="work-card"><div class="card-top-title">2021年2月15日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=ASHD3ntw1FQ" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/ASHD3ntw1FQ/hqdefault.jpg" alt="作品 16"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[INTRO] Flat Flame [Mine-imator+AE] insp.Yellowboy</div></div>
+           <div class="work-card"><div class="card-top-title">2021年2月9日</div><div class="video-wrapper"><a href="https://www.youtube.com/watch?v=lnNb6F5brHU" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/lnNb6F5brHU/hqdefault.jpg" alt="作品 17"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">[INTRO] LittleGreen [Mine-imator+AE] (Minecraft Animation)</div></div>
+        </div>
+        <button class="scroll-btn right-btn" onclick="scrollCarousel('anim-track', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div class="work-category-block" id="gif-works">
+      <h3>動圖作品</h3>
+      <div class="carousel-container">
+        <button class="scroll-btn left-btn" onclick="scrollCarousel('gif-track', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carousel-track" id="gif-track">
+           <div class="work-card"><div class="card-top-title">2025年4月20號</div><div class="video-wrapper"><a href="https://youtube.com/shorts/6D-jPseUZVw?feature=share" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/6D-jPseUZVw/hqdefault.jpg" alt="GIF 作品 01"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">追憶Memories - 玲奈動圖</div></div>
+           <div class="work-card"><div class="card-top-title">2024年2月15號</div><div class="video-wrapper"><a href="https://youtube.com/shorts/LEJtygSsAcY?feature=share" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/LEJtygSsAcY/hqdefault.jpg" alt="GIF 作品 02"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">動圖練習 人設</div></div>
+           <div class="work-card"><div class="card-top-title">2023年12月9號</div><div class="video-wrapper"><a href="https://youtube.com/shorts/Txu_m4q5Ck4?feature=share" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/Txu_m4q5Ck4/hqdefault.jpg" alt="GIF 作品 03"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">動圖練習 EGG BOY</div></div>
+           <div class="work-card"><div class="card-top-title">2024年12月29號</div><div class="video-wrapper"><a href="https://youtube.com/shorts/IXnRbEq3BnI?feature=share" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/IXnRbEq3BnI/hqdefault.jpg" alt="GIF 作品 04"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">動圖練習 - 初音 ミク Rabbit Hole</div></div>
+        </div>
+        <button class="scroll-btn right-btn" onclick="scrollCarousel('gif-track', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+    
+    <div class="work-category-block" id="edit-works">
+      <h3>剪輯作品</h3>
+      <div class="carousel-container">
+        <button class="scroll-btn left-btn" onclick="scrollCarousel('edit-track', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carousel-track" id="edit-track">
+           <div class="work-card"><div class="card-top-title">2023年10月6號</div><div class="video-wrapper"><a href="https://youtu.be/0f-i-E77UOM?si=XHY1T8FFas1fjK_r" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/0f-i-E77UOM/hqdefault.jpg" alt="拜託，不要告我！"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">拜託，不要告我！Accipitrinae ch.阿祈佩特列《小星人》</div></div>
+           <div class="work-card"><div class="card-top-title">2025年4月12號</div><div class="video-wrapper"><a href="https://youtu.be/W4LocA6O-Aw?si=MFAG8kGlmjFfp0Nv" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/W4LocA6O-Aw/hqdefault.jpg" alt="阿棠英文小教室"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">阿棠英文小教室 WuTang ch. 布瑤霧棠 </div></div>
+           <div class="work-card"><div class="card-top-title">2024年7月17日</div><div class="video-wrapper"><a href="https://youtu.be/mtfUABGy5_I?si=qPwtHl0bVw6ILMmn" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/mtfUABGy5_I/hqdefault.jpg" alt="剪輯作品 03"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">【手作】來做冰皮月餅!!!!! _阿祈</div></div>
+           <div class="work-card"><div class="card-top-title">202X年X月X號</div><div class="video-wrapper"><a href="https://www.youtube.com/shorts/ynINlKWwjsA" target="_blank" class="video-link"><img src="https://img.youtube.com/vi/ynINlKWwjsA/hqdefault.jpg" alt="剪輯作品 04"><div class="play-icon"><i class="fa-solid fa-play"></i></div></a></div><div class="card-bottom-title">114514 WuTang ch. 布瑤霧棠 </div></div>
+        </div>
+        <button class="scroll-btn right-btn" onclick="scrollCarousel('edit-track', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  
+  <h2>社群平台</h2>
+  
+  <div class="social-icons-row">
+    
+    <a href="https://linktr.ee/Lonelyyy" target="_blank" title="Linktree">
+      <img src="images/IMG_3111.png" alt="Linktree">
+    </a>
+
+    <a href="https://www.youtube.com/@Lonely.works_" target="_blank" title="YouTube">
+      <img src="images/IMG_3110.png" alt="YouTube">
+    </a>
+
+    <a href="https://x.com/Satou_Works_" target="_blank" title="X (Twitter)">
+      <img src="images/IMG_3108.png" alt="X (Twitter)">
+    </a>
+
+    <a href="https://www.instagram.com/satou.works_/" target="_blank" title="Instagram">
+      <img src="images/IMG_3105.png" alt="Instagram">
+    </a>
+
+    <a href="https://www.facebook.com/satou.xtw/" target="_blank" title="Facebook">
+      <img src="images/IMG_3112.png" alt="Facebook">
+    </a>
+
+    <a href="https://www.foriio.com/Satou-works" target="_blank" title="Foriio">
+      <img src="images/IMG_3107.png" alt="Foriio">
+    </a>
+
+    <a href="https://space.bilibili.com/544520285" target="_blank" title="Bilibili">
+      <img src="images/IMG_3113.png" alt="Bilibili">
+    </a>
+
+    <a href="mailto:satouuworks@gmail.com" title="Email">
+      <img src="images/IMG_3109.png" alt="Email">
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      © 2025 Satou Works. All Rights Reserved.
+    </div>
+    <div class="footer-right">
+      <a href="https://x.com/Satou_Works_" target="_blank">X (Twitter)</a>
+      <a href="https://www.foriio.com/Satou-works" target="_blank">Foriio</a>
+      <a href="https://www.youtube.com/@Lonely.works_" target="_blank">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 定義一個變數來儲存 Observer，讓其他函式可以存取它
+  let scrollObserver;
+
+  // A. 輪播功能
+  function scrollCarousel(trackId, direction) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+    const scrollAmount = 1770; 
+    track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  }
+
+  // B. 網頁載入後執行
+  window.addEventListener('load', function() {
+    // 1. 處理過場動畫 (Loading)
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      // ★★★ 關鍵修改：將時間從 500 改為 3000 (3秒) ★★★
+      // CSS 動畫設定：0.8s 延遲 + 2s 跑動 = 2.8s
+      // 這裡設定 3000ms 確保進度條跑滿 100% 後才淡出
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+      }, 3000); 
+    }
+
+    // 2. 啟動滾動偵測
+    initScrollAnimations();
+    
+    // 3. 啟動選單點擊重整動畫功能
+    initNavClickReset();
+  });
+
+  // C. 滾動視差動畫
+  function initScrollAnimations() {
+    const targets = document.querySelectorAll('.about-box, .work-category-block, .contact-box, section h2, .social-icons-row');
+
+    const options = {
+      root: null,
+      threshold: 0.15 
+    };
+
+    // 將 observer 存入全域變數 scrollObserver
+    scrollObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active'); 
+        } else {
+          entry.target.classList.remove('active'); 
+        }
+      });
+    }, options);
+
+    targets.forEach(target => {
+      target.classList.add('scroll-reveal'); 
+      scrollObserver.observe(target);
+    });
+  }
+
+  // D. 選單點擊時，強制重整動畫
+  function initNavClickReset() {
+    const navLinks = document.querySelectorAll('nav a[href^="#"], .quick-links a[href^="#"]');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+          const animatedElements = targetSection.querySelectorAll('.scroll-reveal');
+          
+          if (targetSection.classList.contains('scroll-reveal')) {
+             triggerReplay(targetSection);
+          }
+
+          animatedElements.forEach(el => {
+             triggerReplay(el);
+          });
+        }
+      });
+    });
+  }
+
+  // 輔助函式：強制重播動畫
+  function triggerReplay(element) {
+    element.classList.remove('active');
+    
+    if (scrollObserver) {
+      scrollObserver.unobserve(element);
+      setTimeout(() => {
+        scrollObserver.observe(element);
+      }, 50); 
+    }
+  }
+</script>
+
+</body>
+</html>
