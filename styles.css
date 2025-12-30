@@ -17,38 +17,113 @@ body {
 }
 a:focus { outline: 3px solid rgba(158,116,255,0.22); outline-offset: 2px; }
 
-/* 2. Header & Nav */
+/* =========================================
+   2. 頁首與導覽列 (修復對齊版)
+   ========================================= */
 header {
-  position: fixed; top: 0; left: 0; right: 0;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 18px 40px; z-index: 1000;
+  position: fixed; 
+  top: 0; left: 0; right: 0;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 18px 40px; 
+  z-index: 1000;
   background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06));
   backdrop-filter: blur(8px);
 }
-.logo { font-weight: 700; letter-spacing: 1px; }
-nav a { color: var(--text); text-decoration: none; margin-left: 22px; font-weight: 600; }
 
-/* 下拉選單 */
-.dropdown { position: relative; display: inline-block; margin-left: 22px; }
+.logo { 
+  font-weight: 700; 
+  letter-spacing: 1px; 
+}
+
+/* ★ 關鍵修正 1：將 nav 設為 Flex 容器 ★ */
+/* 這會強制讓裡面的 a 和 div 全部乖乖站在同一條水平線上 */
+nav {
+  display: flex;
+  align-items: center; /* 垂直置中 */
+  gap: 22px; /* 統一控制按鈕之間的距離，取代原本的 margin-left */
+}
+
+/* 修正 nav 裡面的連結樣式 */
+nav a { 
+  color: var(--text); 
+  text-decoration: none; 
+  font-weight: 600; 
+  /* margin-left: 22px; <--- 這一行一定要刪掉，因為已經用上面的 gap 取代了 */
+}
+
+/* =========================================
+   下拉選單 (Dropdown)
+   ========================================= */
+.dropdown { 
+  position: relative; 
+  display: flex;       /* 讓 dropdown 本身也是 flex，確保內部對齊 */
+  align-items: center; 
+  /* margin-left: 22px; <--- 這一行也要刪掉 */
+}
+
+/* 下拉按鈕本體 (就是在 HTML 裡的那个 .dropbtn) */
 .dropdown .dropbtn {
-  color: var(--text); text-decoration: none; font-weight: 600;
-  cursor: pointer; display: flex; align-items: center; gap: 6px;
+  color: var(--text); 
+  text-decoration: none; 
+  font-weight: 600;
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; /* 讓文字「作品集」跟箭頭 icon 垂直對齊 */
+  gap: 6px;            /* 文字跟 icon 的距離 */
 }
-.dropdown-content {
-  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  background-color: var(--bg1); min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 12px; padding: 8px 0;
-  z-index: 1001; border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(10px);
-}
-.dropdown-content a {
-  color: var(--text); padding: 12px 20px; text-decoration: none;
-  display: block; text-align: center; font-size: 0.95rem; transition: 0.2s;
-}
-.dropdown-content a:hover { background-color: rgba(158, 116, 255, 0.2); color: var(--accent); }
-.dropdown:hover .dropdown-content { display: block; animation: fadeIn 0.3s ease; }
-.dropdown:hover .dropbtn i { transform: rotate(180deg); transition: 0.3s; }
 
-/* 3. Hero Section */
+/* 下拉選單內容 */
+.dropdown-content {
+  display: none; 
+  position: absolute; 
+  top: 100%; 
+  left: 50%; 
+  transform: translateX(-50%); /* 水平置中修正 */
+  
+  background-color: var(--bg1); 
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
+  border-radius: 12px; 
+  padding: 8px 0;
+  z-index: 1001; 
+  border: 1px solid rgba(255,255,255,0.05); 
+  backdrop-filter: blur(10px);
+  
+  /* 防止文字換行 */
+  white-space: nowrap; 
+}
+
+.dropdown-content a {
+  color: var(--text); 
+  padding: 12px 20px; 
+  text-decoration: none;
+  display: block; 
+  text-align: center; 
+  font-size: 0.95rem; 
+  transition: 0.2s;
+  margin: 0; /* 確保下拉選單裡的連結不會受到外部影響 */
+}
+
+.dropdown-content a:hover { 
+  background-color: rgba(158, 116, 255, 0.2); 
+  color: var(--accent); 
+}
+
+/* 滑鼠滑過時顯示選單 */
+.dropdown:hover .dropdown-content { 
+  display: block; 
+  animation: fadeIn 0.3s ease; 
+}
+
+/* 滑鼠滑過時箭頭旋轉 */
+.dropdown:hover .dropbtn i { 
+  transform: rotate(180deg); 
+  transition: 0.3s; 
+}
+
+/* 3. 首頁主視覺 */
 .hero {
   position: relative; height: 100vh; width: 100%;
   display: flex; align-items: center; justify-content: center;
@@ -85,7 +160,7 @@ nav a { color: var(--text); text-decoration: none; margin-left: 22px; font-weigh
 }
 .quick-links .btn:hover { background: var(--accent); color: white; border-color: var(--accent); }
 
-/* 4. About Section */
+/* 4. 關於專區 */
 .container { padding: 110px 24px; max-width: 1100px; margin: 0 auto; }
 #about { width: 100%; padding: 60px 0; display: flex; justify-content: center; }
 .about-box {
@@ -111,7 +186,7 @@ nav a { color: var(--text); text-decoration: none; margin-left: 22px; font-weigh
 .email-contact { margin-top: 32px; font-size: 1.2rem; opacity: 0.9; }
 .email-contact a { color: var(--accent); text-decoration: none; }
 
-/* 5. Works Section */
+/* 5. 作品專區 */
 #works { background-color: var(--bg2); }
 h2 { font-size: 3.6rem; margin-bottom: 30px; border-left: 5px solid var(--accent); padding-left: 16px; opacity: 0.95; }
 .works-section { width: 100%; padding: 60px 0; overflow: hidden; }
@@ -158,7 +233,7 @@ h3 { font-size: 1.8rem; margin: 0 0 20px 0; text-align: center; opacity: 0.9; }
 .scroll-btn:hover { background-color: var(--accent); color: white; transform: translateY(-50%) scale(1.1); }
 .left-btn { left: -25px; } .right-btn { right: -25px; }
 
-/* 6. Contact Section */
+/* 6. 聯絡資訊 */
 #contact {
   background-color: var(--bg2); padding: 120px 0 220px 0; 
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -175,7 +250,7 @@ h3 { font-size: 1.8rem; margin: 0 0 20px 0; text-align: center; opacity: 0.9; }
 }
 .social-icons-row a:hover { opacity: 1; transform: translateY(-12px) scale(1.1); filter: drop-shadow(0 0 20px rgba(158, 116, 255, 0.6)); z-index: 10; }
 
-/* 7. Footer */
+/* 7. 頁尾 */
 footer {
   background-color: var(--bg2); padding: 60px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); 
   font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);
@@ -185,7 +260,7 @@ footer {
 .footer-right a { color: rgba(255, 255, 255, 0.6); text-decoration: none; transition: color 0.3s; }
 .footer-right a:hover { color: var(--accent); }
 
-/* 8. Preloader */
+/* 8. 加載器 */
 #preloader {
   position: fixed; top: 0; left: 0; width: 100%; height: 100%;
   background-color: var(--bg2); z-index: 9999;
